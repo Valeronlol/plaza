@@ -1,0 +1,1 @@
+1)Before build uncomment development\app\libs\font-awesome\scss\_variables.scss: 7

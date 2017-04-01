@@ -1,6 +1,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
+@import "keyframes"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -33,13 +34,122 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.75
-	font-family: $default-font
+	font-family: $ubuntu-font
 	overflow-x: hidden
 	opacity: 1
+	text-align: center
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+#main
+	min-height: calc(100vh - 100px)
+
+header
+	height: 70px
+	background-color: #FAFBFC
+	box-shadow: $box-shadow
+	ul
+		height: 70px
+		display: flex
+		flex-wrap: nowrap
+		flex-direction: row
+		justify-content: space-around
+		margin: 0
+		li
+			list-style: none
+			a
+				color: $plaza
+				font-family: $ubuntu-font
+				text-transform: uppercase
+				font-size: 17px
+				line-height: 70px
+			.fa
+				color: $plaza
+				margin-right: 10px
+			.fa-phone
+				&:hover
+					animation: bounce 0.75s steps(10) infinite
+			.fa-search
+				&:hover
+					transform: scale(1.25)
+	.header-logo-wrap
+		padding: 0
+		position: relative
+		.header-logo
+			position: absolute
+			right: 0
+			left: 0
+			top: 0
+			bottom: 0
+			height: 100px
+			background: $plaza
+			border-radius: 0 0 15px 15px
+			padding: 0
+			margin: 0
+			box-shadow: $box-shadow
+			transition: .4s ease-in-out
+			&:hover
+				transform: scale(1.07)
+			.logo
+				display: block
+				width: 60%
+				height: 100%
+				background: 50% 50% no-repeat
+				background-size: contain
+				margin: 0 auto
+	.fa-search
+		transition: .4s ease-in-out
+
+footer
+	font-family: $arimo-font
+	background: $plaza
+	height: 100px
+	color: #fff
+	font-size: 14px
+	.footer-container
+		margin-top: 12px
+	.footer-logo
+		display: block
+		width: 100%
+		height: 50px
+		background: 50% 50% no-repeat
+		background-size: contain
+		margin: 0 auto
+		transition: .4s ease-in-out
+		&:hover
+			transform: scale(1.1)
+	.social-wrap
+		border-radius: 50%
+		background-color: #fff
+		margin: 5px
+		display: inline-block
+		width: 37px
+		height: 37px
+		transition: .5s ease-in-out
+		&:hover
+			background-color: $plaza
+		.fa
+			color: $plaza
+			display: block
+			margin: 0 auto
+			line-height: 37px
+			transition: 0.3s ease-in-out
+			&:hover
+				color: #fff
+		a
+			text-decoration: none
+	p
+		margin: 5px 0
+
+
+
+
+
+
+
+
 
 @import "media" // Всегда в конце
