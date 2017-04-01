@@ -1,0 +1,5 @@
+.idea/
+npm-debug.log
+uploads/*
+!uploads/.htaccess
+/wp-config.php
