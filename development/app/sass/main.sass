@@ -18,7 +18,8 @@
 *:-ms-input-placeholder
 	color: #666
 	opacity: 1
-
+*
+	outline: none
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #666
@@ -43,10 +44,32 @@ body
 	display: block
 	max-width: 100%
 	height: auto
-
+li
+	list-style: none
 #main
 	min-height: calc(100vh - 100px)
-
+	position: relative
+	border: 1px solid $plaza
+#content
+	background: 50% 25% no-repeat
+	width: 100%
+	overflow: hidden
+	h2
+		text-align: center
+	.main-content-title
+		margin: 10% 0 0 10%
+		font-size: 45px
+		text-transform: uppercase
+		color: $plaza
+		text-align: left
+	.map-container
+		height: 350px
+		#map
+			padding: 20px
+			height: 100%
+			width: 100%
+	.maps-wrapper
+		margin-top: 5%
 header
 	height: 70px
 	background-color: #FAFBFC
@@ -59,13 +82,16 @@ header
 		justify-content: space-around
 		margin: 0
 		li
-			list-style: none
 			a
 				color: $plaza
 				font-family: $ubuntu-font
 				text-transform: uppercase
 				font-size: 17px
 				line-height: 70px
+				transition: .25s ease
+				&:hover
+					color: darken($plaza,75%)
+					text-decoration: none
 			.fa
 				color: $plaza
 				margin-right: 10px
@@ -97,7 +123,7 @@ header
 				display: block
 				width: 60%
 				height: 100%
-				background: 50% 50% no-repeat
+				background: $backgroundImg
 				background-size: contain
 				margin: 0 auto
 	.fa-search
@@ -109,13 +135,14 @@ footer
 	height: 100px
 	color: #fff
 	font-size: 14px
+	border-top: 2px solid #fff
 	.footer-container
 		margin-top: 12px
 	.footer-logo
 		display: block
 		width: 100%
 		height: 50px
-		background: 50% 50% no-repeat
+		background: $backgroundImg
 		background-size: contain
 		margin: 0 auto
 		transition: .4s ease-in-out
@@ -144,12 +171,205 @@ footer
 	p
 		margin: 5px 0
 
+#bottom_menu
+	height: 95px
+	margin: 60px auto
+	.container
+		border-radius: 7px
+		background: #FAFBFC
+		box-shadow: $box-shadow
+		ul
+			height: 95px
+			display: flex
+			flex-wrap: nowrap
+			flex-direction: row
+			justify-content: space-around
+			align-items: center
+			margin: 0
+			padding: 0
+		li
+			width: 100%
+			height: 75px
+			line-height: 75px
+			border-right: 1px solid $plaza
+			&:last-child
+				border-right: 0
+			a
+				text-transform: uppercase
+				text-decoration: none
+				font-size: 19px
+				position: relative
+				&:hover
+					color: #f2d801
+				&:hover .bottom-menu-svg path
+					fill: #f2d801
+				*
+					transition: .3s ease
+			.bottom-menu-svg
+				width: 50px
+				height: 50px
+				position: absolute
+				left: -60px
+				top: -15px
+				fill: $plaza
+				path
+					fill: $plaza
+			.sales
+				transform: rotate(45deg)
 
 
+#map_contacts
+	margin: 20% 0 0 20%
+	padding: 0
+	text-align: left
+	li
+		position: relative
+		&:before
+			content: ''
+			display: block
+			height: 40px
+			width: 40px
+			position: absolute
+			left: -50px
+			top: -6px
+			background: $backgroundImg
+			background-size: 75%
+	.coors::before
+		background-image: url('../img/icon/coords.png')
+	.phone::before
+		background-image: url('../img/icon/phone.png')
+	.mail::before
+		background-image: url('../img/icon/mail.png')
+	.insta::before
+		background-image: url('../img/icon/instagramm.png')
 
+.shop-wrap
+	position: relative
+	margin-top: 50px
+	text-align: left
+	.shop-slide-content
+		position: relative
+		height: 400px
+		background-color: #fff
+	h2
+		color: #ffffff
+		font-size: 30px
+		margin: 0
+	h3
+		font-size: 25px
+		color: $plaza
+	p
+		font-size: 17px
+		line-height: 22px
+	.shop-slide-img
+		height: 400px
+		background: $backgroundImg
+		background-size: cover
+	.shop-info-wrap
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		text-align: center
+		height: 70px
+		display: flex
+		flex-flow: row nowrap
+		justify-content: center
+		align-items: center
+		margin: 20px 0 0 0
+		padding: 0
+		li
+			width: 100%
+			vertical-align: bottom
+			position: relative
+			&:before
+				content: ''
+				display: block
+				height: 40px
+				width: 40px
+				position: absolute
+				top: -40px
+				left: calc(50% - 20px)
+				background: $backgroundImg
+			&:first-child::before
+				background-image: url("../img/icon/phone.png")
+			&:nth-child(2)::before
+				background-image: url("../img/icon/etaj.png")
+			&:last-child::before
+				background-image: url("../img/icon/instagramm.png")
 
+.slick-arrow
+	position: absolute
+	height: 55px
+	width: 55px
+	font-size: 0
+	background: $backgroundImg transparent
+	background-size: 50%
+	border: 0
+	top: calc(50% - 27px)
+.slick-next
+	right: -55px
+	background-image: url("../img/icon/right.png")
+.slick-prev
+	left: -55px
+	background-image: url("../img/icon/left.png")
+.slick-dots
+	position: absolute
+	padding: 0
+	margin: 0
+	bottom: 25px
+	left: 25%
+	li
+		float: left
+		button
+			height: 14px
+			width: 14px
+			margin: 0 3px
+			border: 0
+			font-size: 0
+			background: #fff
+			border-radius: 50%
+	li.slick-active button
+		background: #FEF101
+.blog-page
+	width: 100%
+	margin-top: 80px
+	text-align: left
+	.blog-left-menu
+		padding: 0
+		ul
+			padding: 0
+		a
+			color: #ffffff
+			font-size: 19px
+		a.active
+			font-size: 26px
+	.blog-right-menu
+		.blog-news
+			height: 350px
+			margin-bottom: 30px
+			background-color: #fff
+		&-img
+			height: 170px
+			background: $backgroundImg
+			background-size: cover
+		h3
+			color: $plaza
+			text-transform: uppercase
+			font-size: 26px
+			margin: 15px 0 0 0
+		p
+			font-size: 19px
+			color: #777
+			line-height: 22px
+			margin: 0
+			max-height: 70px
+			overflow: hidden
+		&-date
+			font-weight: bold
+			color: $plaza
+			font-size: 19px
 
-
-
-
+.bluebg
+	background: linear-gradient(to right, rgba(65,105,176,1) 0%, rgba(54,84,144,1) 100%)
 @import "media" // Всегда в конце

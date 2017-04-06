@@ -26,6 +26,7 @@ gulp.task('common-js', function () {
 gulp.task('js', ['common-js'], function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/slick-1.6.0/slick/slick.min.js',
         'app/js/common.min.js', // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
@@ -64,7 +65,7 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
 gulp.task('imagemin', function () {
     return gulp.src('app/img/**/*')
         .pipe(cache(imagemin()))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('../wp-content/themes/plaza/img'));
 });
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
