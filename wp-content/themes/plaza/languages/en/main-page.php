@@ -1,9 +1,4 @@
-<?php
-/*
-Template Name: Главная страница
-*/
-?>
-<?php get_header() ;?>
+<?php get_header('en') ;?>
 
 <section id="content" style="background-image: url(<?php echo get_template_directory_uri();?>/img/main_girl.jpg)">
     <div class="container">
@@ -14,4 +9,4 @@ Template Name: Главная страница
     </div>
 </section>
 
-<?php get_footer() ;?>
+<?php get_footer('en') ;?>

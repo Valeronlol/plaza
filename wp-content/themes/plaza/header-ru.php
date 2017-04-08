@@ -14,7 +14,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta charset="utf-8">
-    <title><?php the_title();?></title>
+    <title>RU<?php the_title();?></title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -41,6 +41,7 @@
                     <ul class="header-left-menu">
                         <li><a href="#">О ценtтре</a></li>
                         <li><a href="#">Plaza 2</a></li>
+                        <?php pll_the_languages() ;?>
                     </ul>
                 </div>
                 <div class="col-md-2 header-logo-wrap">
