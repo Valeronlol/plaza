@@ -1,0 +1,2 @@
+[08-Apr-2017 17:01:54 UTC] PHP Notice:  Use of undefined constant TEMP_DIR - assumed 'TEMP_DIR' in C:\dev\OpenServer\domains\plaza.loc\wp-content\themes\plaza\functions.php on line 2
+[08-Apr-2017 17:01:54 UTC] PHP Notice:  Use of undefined constant TEMP_URI - assumed 'TEMP_URI' in C:\dev\OpenServer\domains\plaza.loc\wp-content\themes\plaza\functions.php on line 3

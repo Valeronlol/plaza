@@ -1,33 +1,44 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Plaza
- */
-
-?>
-
-<div id="bottom_menu">
-    <div class="container">
-        <div class="row">
-            <ul>
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Планы</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 </div> <!-- #main-->
 
 <footer>
+    <div id="bottom_menu">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/bag.svg"/>
+                            <span>Магазин</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="bottom-menu-svg sales" src="<?php echo TEMP_URI;?>img/svg/tag.svg"/>
+                            <span>Акции</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/clipboard-with-a-list.svg"/>
+                            <span>Услуги</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/speech-bubble.svg"/>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/plan.svg"/>
+                            <span>Планы</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-3 footer-container">
