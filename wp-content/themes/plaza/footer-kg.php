@@ -4,35 +4,35 @@
     <div id="bottom_menu">
         <div class="container">
             <div class="row">
-                <ul>
+                <ul class="kg-fix">
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/bag.svg"/>
-                            <span>Магазин</span>
+                            <span>Борбору</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg sales" src="<?php echo TEMP_URI;?>img/svg/tag.svg"/>
-                            <span>Акции</span>
+                            <span>Акциялар</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/clipboard-with-a-list.svg"/>
-                            <span>Услуги</span>
+                            <span>Кызмат</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/speech-bubble.svg"/>
-                            <span>Новости</span>
+                            <span>Жаңылыктар</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/plan.svg"/>
-                            <span>Планы</span>
+                            <span>Пландар</span>
                         </a>
                     </li>
                 </ul>
@@ -50,14 +50,14 @@
             <div class="col-md-3 footer-container">
                 <p>Контакты:</p>
                 <span>+996 312  69-04-40</span><br>
-                <span>plaza2012@mail.ru</span>
+                <a class="mailto" href="mailto:plaza2012@mail.ru">plaza2012@mail.ru</a>
             </div>
             <div class="col-md-3 footer-container">
                 <p>Адрес:</p>
-                <span>Бишкек, ул. Ибраимова 115</span>
+                <span>Бишкек, <br> көчөсү Ибраимова 115</span>
             </div>
             <div class="col-md-3 footer-container">
-                <p>Мы в соц сетях:</p>
+                <p>Биз социалдык тармактарда:</p>
                 <span class="social-wrap">
 					<a href="#">
 						<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>

@@ -51,7 +51,7 @@
             <div class="col-md-3 footer-container">
                 <p>Контакты:</p>
                 <span>+996 312  69-04-40</span><br>
-                <span>plaza2012@mail.ru</span>
+                <a class="mailto" href="mailto:plaza2012@mail.ru">plaza2012@mail.ru</a>
             </div>
             <div class="col-md-3 footer-container">
                 <p>Адрес:</p>

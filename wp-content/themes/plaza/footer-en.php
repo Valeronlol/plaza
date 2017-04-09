@@ -8,31 +8,31 @@
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/bag.svg"/>
-                            <span>Магазин</span>
+                            <span>Shop</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg sales" src="<?php echo TEMP_URI;?>img/svg/tag.svg"/>
-                            <span>Акции</span>
+                            <span>Sales</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/clipboard-with-a-list.svg"/>
-                            <span>Услуги</span>
+                            <span>Services</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/speech-bubble.svg"/>
-                            <span>Новости</span>
+                            <span>News</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/plan.svg"/>
-                            <span>Планы</span>
+                            <span>Our plans</span>
                         </a>
                     </li>
                 </ul>
@@ -48,16 +48,16 @@
                 <p>© Plaza 2017, All rights reserved</p>
             </div>
             <div class="col-md-3 footer-container">
-                <p>Контакты:</p>
+                <p>Contacts:</p>
                 <span>+996 312  69-04-40</span><br>
-                <span>plaza2012@mail.ru</span>
+                <a class="mailto" href="mailto:plaza2012@mail.ru">plaza2012@mail.ru</a>
             </div>
             <div class="col-md-3 footer-container">
-                <p>Адрес:</p>
-                <span>Бишкек, ул. Ибраимова 115</span>
+                <p>Adres:</p>
+                <span>Bishkek, <br> Ibraimova street 115</span>
             </div>
             <div class="col-md-3 footer-container">
-                <p>Мы в соц сетях:</p>
+                <p>Social networks:</p>
                 <span class="social-wrap">
 					<a href="#">
 						<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
