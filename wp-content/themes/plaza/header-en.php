@@ -25,20 +25,20 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-xs-5 col-md-5">
                     <ul class="header-left-menu">
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Plaza 2</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 header-logo-wrap">
+                <div class="col-xs-2 col-md-2 header-logo-wrap">
                     <div class="header-logo">
                         <a href="#">
                             <span class="logo" style="background-image: url(<?php echo get_template_directory_uri();?>/img/logo.png)"></span>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-xs-5 col-md-5">
                     <ul class="header-right-menu">
                         <li>
                             <a class="header-menu-contacts" href="#">

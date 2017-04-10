@@ -41,22 +41,22 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-3 footer-container">
+            <div class="col-md-3  col-sm-12 footer-container">
                 <a href="#">
                     <span class="footer-logo" style="background-image: url(<?php echo get_template_directory_uri();?>/img/logo.png)"></span>
                 </a>
                 <p>© Plaza 2017, Бардык укуктар корголгон</p>
             </div>
-            <div class="col-md-3 footer-container">
+            <div class="col-md-3 col-sm-4 footer-container">
                 <p>Контакты:</p>
                 <span>+996 312  69-04-40</span><br>
                 <a class="mailto" href="mailto:plaza2012@mail.ru">plaza2012@mail.ru</a>
             </div>
-            <div class="col-md-3 footer-container">
+            <div class="col-md-3 col-sm-4 footer-container">
                 <p>Адрес:</p>
                 <span>Бишкек, <br> көчөсү Ибраимова 115</span>
             </div>
-            <div class="col-md-3 footer-container">
+            <div class="col-md-3 col-sm-4 footer-container">
                 <p>Биз социалдык тармактарда:</p>
                 <span class="social-wrap">
 					<a href="#">
