@@ -10,6 +10,25 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+  .slick-dots
+    top: 30px
+    bottom: inherit
+    left: 50%
+    transform: translate(-50%)
+  #map_contacts
+    margin-top: 25px
+    li
+      width: 50%
+      float: left
+      &:before
+        top: 7px
+  .about:nth-child(even) .about-img
+    float: none
+  .about
+    margin: 20px auto
+    height: auto
+    .about-img
+      height: 300px
   #bottom_menu .container
     width: 96%
   #bottom_menu span
@@ -20,6 +39,13 @@
     height: auto
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+  .blog-right-menu
+    ul
+      text-align: center
+  #map_contacts
+    margin-top: 25px
+    li
+      width: 100%
   #bottom_menu .container li .bottom-menu-svg
     width: 35px
     height: 35px
