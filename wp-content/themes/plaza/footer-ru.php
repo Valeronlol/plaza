@@ -16,7 +16,7 @@ if (!empty(get_post_custom()['class'])){
     <div class="container">
         <div class="row">
             <div class="col-md-3  col-sm-12 footer-container">
-                <a href="#">
+                <a href="/">
                     <span class="footer-logo" style="background-image: url(<?php echo get_template_directory_uri();?>/img/logo.png)"></span>
                 </a>
                 <p>© Plaza 2017, Все права защищены</p>
@@ -31,14 +31,14 @@ if (!empty(get_post_custom()['class'])){
                 <span>Бишкек, ул. Ибраимова 115</span>
             </div>
             <div class="col-md-3 col-sm-4 footer-container">
-                <p>Мы в соц сетях:</p>
+                <p>Биз социалдык тармактарда:</p>
                 <span class="social-wrap">
-					<a href="#">
+					<a href="https://www.facebook.com/pages/Dordoi-Plaza/186015214787889" target="_blank">
 						<i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
 					</a>
 				</span>
                 <span class="social-wrap">
-					<a href="#">
+					<a href="https://www.instagram.com/explore/locations/270833495/?hl=en" target="_blank">
 						<i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
 					</a>
 				</span>
@@ -49,6 +49,9 @@ if (!empty(get_post_custom()['class'])){
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/main.min.css">
 <script src="<?php echo get_template_directory_uri();?>/js/scripts.min.js"></script>
+<?php if(!empty(get_post_custom()['google_maps'])) :?>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjSljSaKWga3w6ilMtLUOaHDh067eby1U&callback=initMap"></script>
+<?php endif; ?>
 <?php wp_footer(); ?>
 
 </body>

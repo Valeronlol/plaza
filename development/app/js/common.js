@@ -126,7 +126,7 @@ function initMap() {
     });
     var customMapTypeId = 'custom_style';
     var myLatLng = { lat: 42.874229, lng: 74.618072 }; // Координаты .
-    var image = '../img/icon/icon_map.png'; // Marker Icon
+    var image = '../../icon_map.png'; // Marker Icon
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         scrollwheel: false,
