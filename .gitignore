@@ -1,6 +1,5 @@
 .idea/
 npm-debug.log
-uploads/*
 !uploads/.htaccess
 /wp-config.php
 /wp-content/debug.log

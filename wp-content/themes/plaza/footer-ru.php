@@ -1,42 +1,15 @@
 </div> <!-- #main-->
 
-<footer>
-
+<footer class="<?php
+if (!empty(get_post_custom()['class'])){
+    foreach (get_post_custom()['class'] as $class)
+        echo "$class ";
+}
+;?>">
     <div id="bottom_menu">
         <div class="container">
             <div class="row">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/bag.svg"/>
-                            <span>Магазин</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg sales" src="<?php echo TEMP_URI;?>img/svg/tag.svg"/>
-                            <span>Акции</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/clipboard-with-a-list.svg"/>
-                            <span>Услуги</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/speech-bubble.svg"/>
-                            <span>Новости</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/plan.svg"/>
-                            <span>Планы</span>
-                        </a>
-                    </li>
-                </ul>
+                <?php wp_nav_menu( array('menu' => 'bottom_menu_ru' )); ?>
             </div>
         </div>
     </div>

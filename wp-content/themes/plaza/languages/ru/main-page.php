@@ -1,12 +1,9 @@
-<?php get_header('ru') ;?>
+<?php
 
-<section id="content" style="background-image: url(<?php echo get_template_directory_uri();?>/img/main_girl.jpg)">
-    <div class="container">
-        <div class="row">
-            <h2 class="main-content-title">RU ВЕСЕННИЕ КАНИКУЛЫ <br>
-                В DORDOI PLAZA!</h2>
-        </div>
-    </div>
-</section>
+get_header('ru');
 
-<?php get_footer('ru') ;?>
+global $post;
+echo get_post($post)->post_content;
+
+get_footer('ru');
+

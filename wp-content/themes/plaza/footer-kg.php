@@ -1,41 +1,15 @@
 </div> <!-- #main-->
 
-<footer>
+<footer class="<?php
+    if (!empty(get_post_custom()['class'])){
+        foreach (get_post_custom()['class'] as $class)
+            echo "$class ";
+    }
+    ;?>">
     <div id="bottom_menu">
         <div class="container">
             <div class="row">
-                <ul class="kg-fix">
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/bag.svg"/>
-                            <span>Борбору</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg sales" src="<?php echo TEMP_URI;?>img/svg/tag.svg"/>
-                            <span>Акциялар</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/clipboard-with-a-list.svg"/>
-                            <span>Кызмат</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/speech-bubble.svg"/>
-                            <span>Жаңылыктар</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="bottom-menu-svg" src="<?php echo TEMP_URI;?>img/svg/plan.svg"/>
-                            <span>Пландар</span>
-                        </a>
-                    </li>
-                </ul>
+                <?php wp_nav_menu( array('menu' => 'bottom_menu_kg', 'menu_class' => 'kg-fix' )); ?>
             </div>
         </div>
     </div>

@@ -21,19 +21,24 @@
 </head>
 
 <body>
-<div id="main" class="bluebg">
+<div id="main" class="<?php
+if (!empty(get_post_custom()['class'])){
+    foreach (get_post_custom()['class'] as $class)
+        echo "$class ";
+}
+;?>">
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-xs-5 col-md-5">
                     <ul class="header-left-menu">
-                        <li><a href="#">Борбору жөнүндө</a></li>
-                        <li><a href="#">Plaza 2</a></li>
+                        <li><a href="<?php echo get_permalink(46) ;?>">Борбору жөнүндө</a></li>
+                        <li><a href="<?php echo get_permalink(102) ;?>">Plaza 2</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-2 col-md-2 header-logo-wrap">
                     <div class="header-logo">
-                        <a href="#">
+                        <a href="/">
                             <span class="logo" style="background-image: url(<?php echo get_template_directory_uri();?>/img/logo.png)"></span>
                         </a>
                     </div>
@@ -41,7 +46,7 @@
                 <div class="col-xs-5 col-md-5">
                     <ul class="header-right-menu">
                         <li>
-                            <a class="header-menu-contacts" href="#">
+                            <a class="header-menu-contacts" href="<?php echo get_permalink(66) ;?>">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 Байланыштар
                             </a>
