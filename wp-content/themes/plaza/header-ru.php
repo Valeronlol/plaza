@@ -21,10 +21,14 @@
 </head>
 
 <body>
-<div id="main" class="<?php
+<div id="main" class="
+<?php
 if (!empty(get_post_custom()['class'])){
     foreach (get_post_custom()['class'] as $class)
         echo "$class ";
+}
+if (is_category()){
+    echo ' bluebg';
 }
 ;?>">
     <header>
@@ -33,7 +37,7 @@ if (!empty(get_post_custom()['class'])){
                 <div class="col-xs-5 col-md-5">
                     <ul class="header-left-menu">
                         <li><a href="<?php echo get_permalink(44) ;?>">О центре</a></li>
-                        <li><a href="<?php echo get_permalink(100) ;?>">Plaza 2</a></li>
+                        <li><a href="<?php echo get_permalink(100) ;?>">Дордой плаза два</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-2 col-md-2 header-logo-wrap">

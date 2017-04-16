@@ -21,12 +21,16 @@
 </head>
 
 <body>
-<div id="main" class="<?php
+<div id="main" class="
+<?php
     if (!empty(get_post_custom()['class'])){
         foreach (get_post_custom()['class'] as $class)
             echo "$class ";
     }
-    ;?>">
+    if (is_category()){
+        echo ' bluebg';
+    }
+;?>">
     <header>
         <div class="container">
             <div class="row">
