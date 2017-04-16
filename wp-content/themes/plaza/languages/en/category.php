@@ -6,11 +6,11 @@ $category_id = get_the_category()[0]->cat_ID;
 $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 $the_query = new WP_Query( array(
     'post_type' => 'post',
-    'post_status' => 'publish',
+    'post_status'=> 'publish',
     'posts_per_page' => 2,
     'cat' => $category_id,
     'numberposts' => 0,
-    'orderby' => 'rand',
+    'order'    => 'ASC',
     'paged' => $paged
 ));
 
@@ -58,24 +58,21 @@ foreach ($categories as &$category){
                                 </div>
                             </div>
                         <?php endwhile; ?>
-
+                        <?php wp_reset_postdata();?>
                     </div>
                 </div>
 
                 <div class="container breadcrumbs">
                     <div class="row">
                         <div id="pagi">
-                            <?php echo paginate_links(array(
-                                'base'    => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-                                'format'  => '?paged=%#%',
-                                'current' => max( 1, get_query_var('paged') ),
-                                'total'   => $the_query->max_num_pages
-                            ));?>
-
+                            <?php echo get_the_posts_pagination([
+                                'prev_text'    => __('« Previous'),
+                                'next_text'    => __('Next »'),
+                                'screen_reader_text' => __( ' ' ),
+                            ]); ?>
                         </div>
                     </div>
                 </div>
-                <?php wp_reset_postdata();?>
             </div>
         </div>
     </section>

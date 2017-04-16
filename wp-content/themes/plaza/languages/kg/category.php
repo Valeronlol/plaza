@@ -6,10 +6,11 @@ $category_id = get_the_category()[0]->cat_ID;
 $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 $the_query = new WP_Query( array(
     'post_type' => 'post',
-    'posts_per_page' => 12,
+    'post_status'=> 'publish',
+    'posts_per_page' => 2,
     'cat' => $category_id,
     'numberposts' => 0,
-    'orderby' => 'rand',
+    'order'    => 'ASC',
     'paged' => $paged
 ));
 
@@ -58,6 +59,18 @@ foreach ($categories as &$category){
                             </div>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata();?>
+                    </div>
+                </div>
+
+                <div class="container breadcrumbs">
+                    <div class="row">
+                        <div id="pagi">
+                            <?php echo get_the_posts_pagination([
+                                'prev_text'    => __('« Мурунку'),
+                                'next_text'    => __('Кийинки »'),
+                                'screen_reader_text' => __( ' ' ),
+                            ]); ?>
+                        </div>
                     </div>
                 </div>
             </div>
