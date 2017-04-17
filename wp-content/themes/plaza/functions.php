@@ -61,3 +61,25 @@ function getPlazaLocale()
     }
 }
 
+/**
+ * set excerpt length
+ */
+add_filter('excerpt_length', function() {
+    return 7;
+});
+
+/**
+ * set excerpt more
+ */
+add_filter('excerpt_more', function()
+{
+    global $post;
+
+    switch (getPlazaLocale()){
+        case ('en'): $phrase = 'Read more'; break;
+        case ('ru'): $phrase = 'Читать дальше'; break;
+        case ('kg'): $phrase = 'Көбүрөөк оку';
+    }
+
+    return "<a href='{get_permalink($post->ID)}'> $phrase...</a>";
+});

@@ -21,12 +21,9 @@
 </head>
 
 <body>
-<div id="main" class="
-<?php
-if (!empty(get_post_custom()['class'])){
-    foreach (get_post_custom()['class'] as $class)
-        echo "$class ";
-}
+<div id="main" class="<?php
+echo get_field( "background_color", $post->ID ) . ' ';
+
 if (is_category()){
     echo ' bluebg';
 }

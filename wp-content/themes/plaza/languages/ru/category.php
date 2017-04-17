@@ -34,8 +34,8 @@ foreach ($categories as &$category){
                             <?php foreach (get_categories() as $category) :?>
                                 <li>
                                     <a
-                                            href="<?php echo get_category_link($category) ;?>"
-                                            class="<?php echo ($category_id === $category->cat_ID ? 'active' : '');?>"
+                                        href="<?php echo get_category_link($category) ;?>"
+                                        class="<?php echo ($category_id === $category->cat_ID ? 'active' : '');?>"
                                     ><?php echo $category->cat_name ;?>
                                     </a>
                                 </li>
@@ -53,7 +53,7 @@ foreach ($categories as &$category){
                                     <div class="blog-right-menu-img" style="background-image: url(<?php echo $thumbnail ;?>)"></div>
                                     <div class="col-md-12">
                                         <a href="<?php echo get_permalink($post->ID) ;?>"><h2><?php the_title() ;?></h2></a>
-                                        <p><?php echo $post->post_content ;?></p>
+                                        <p><?php the_excerpt(); ?></p>
                                     </div>
                                 </div>
                             </div>
