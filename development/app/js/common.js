@@ -9,6 +9,43 @@ $(function() {
         speed: 700
     });
 
+    $('.main-slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 700,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
+
+    $('.news-category').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 700,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
     // svg color painter
     $('#bottom_menu .container li a').on('mouseenter', function () {
         $(this).addClass('svg-color');

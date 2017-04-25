@@ -38,6 +38,9 @@ add_filter('template_include', function ($temp)
     } elseif (is_single()) {
         return "$dir/$lang/single.php";
     } elseif (is_category()) {
+        if ( $delim = strstr($file, '-') ){
+            return "$dir/$lang/category$delim";
+        }
         return "$dir/$lang/category.php";
     } elseif (is_404()) {
         return "$dir/$lang/404.php";
@@ -74,12 +77,14 @@ add_filter('excerpt_length', function() {
 add_filter('excerpt_more', function()
 {
     global $post;
+    $link = get_permalink($post->ID);
+    $phrase = '';
 
     switch (getPlazaLocale()){
         case ('en'): $phrase = 'Read more'; break;
-        case ('ru'): $phrase = 'Читать дальше'; break;
+        case ('ru'): $phrase = 'Читать далее'; break;
         case ('kg'): $phrase = 'Көбүрөөк оку';
     }
 
-    return "<a href='{get_permalink($post->ID)}'> $phrase...</a>";
+    return "<a href='$link'> $phrase...</a>";
 });

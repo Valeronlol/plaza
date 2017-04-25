@@ -47,13 +47,14 @@ body
 li
 	list-style: none
 #main
-	min-height: calc(100vh - 100px)
+	min-height: calc(100vh - 70px)
 	position: relative
 	border: 1px solid $plaza
-#content
-	background: 50% 25% no-repeat
+.content
+	background: 50% 50% no-repeat
+	background-size: cover
 	width: 100%
-	min-height: calc(100vh - 170px)
+	min-height: calc(100vh - 70px)
 	overflow: hidden
 	padding-bottom: 50px
 	h2
@@ -123,6 +124,7 @@ header
 		padding: 0
 		position: relative
 		.header-logo
+			z-index: 1
 			position: absolute
 			right: 0
 			left: 0
@@ -352,6 +354,10 @@ footer
 .slick-prev
 	left: -55px
 	background-image: url("../img/icon/left.png")
+.news-category .slick-prev
+	left: -23px
+.news-category .slick-next
+	right: -23px
 .slick-dots
 	position: absolute
 	padding: 0
@@ -417,10 +423,20 @@ footer
 			p
 				font-size: 16px
 			h2
-				text-align: left !important
+				text-align: left
 				margin: 5px 0
 				line-height: 22px
 				font-size: 20px
+.tac
+	text-align: center!important
+.news-header
+	color: #333333
+	text-transform: capitalize
+	text-decoration: none
+	transition: .3s ease
+	&:hover
+		transform: scale(1.05)
+
 .about
 	height: 350px
 	&:first-child
@@ -434,9 +450,10 @@ footer
 		height: 100%
 	.about-info
 		background-color: #ffffff
-		text-align: left
+		text-align: center
 		height: 100%
 		overflow: hidden
+		font-family: $arimo-font
 		h2
 			text-align: left!important
 			color: $plaza

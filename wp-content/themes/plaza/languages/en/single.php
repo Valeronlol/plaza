@@ -6,7 +6,7 @@
         <p style="color:red; font-size: 25px; margin-top: 100px;">Пожалуйста, поставте хотя бы одну картинку в слайдер этой записи!</p>
     <?php endif ;?>
 
-    <section id="content">
+    <section class="content">
         <div class="container">
             <div class="row">
                 <div class="shop-wrap col-md-10 col-md-offset-1">

@@ -25,7 +25,7 @@ foreach ($categories as &$category){
 ?>
 <?php get_header('en');?>
 
-    <section id="content">
+    <section class="content">
         <div class="container">
             <div class="row">
                 <div class="blog-page col-md-12">
