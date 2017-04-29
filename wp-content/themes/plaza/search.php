@@ -1,48 +1,32 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Plaza
- */
+get_header(getPlazaLocale());
 
-get_header(); ?>
+$the_query = new WP_Query([
+    's' => get_search_query()
+]);
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+if ( $the_query->have_posts() ) {
+    _e("<h2 style='font-weight:bold;color:#000;margin-top: 100'>Search Results for: ".get_query_var('s')."</h2>");
+    while ( $the_query->have_posts() ) {
+        $the_query->the_post();
+        ?>
+        <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+        <?php
+    }
+    }else{
+    ?>
 
-		<?php
-		if ( have_posts() ) : ?>
+    <div class="alert alert-info">
+    <?php
+        switch (getPlazaLocale()){
+            case('en'): echo '<h2 style=\'font-weight:bold;color:#000\'>Nothing Found</h2><p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>'; break;
+            case('kg'): echo '<p><h2 style=\'font-weight:bold;color:#000\'>Эч нерсе табылган жок</h2>Кечиресиз, бирок эч нерсе издөө критерийлерине дал келген жок. Сураныч, Башка ачкыч сөздөрү менен кайта аракет.</p>'; break;
+            case('ru'): echo '<p><h2 style=\'font-weight:bold;color:#000\'>По вашему запросу ничего не найдено</h2>Увы, ничего не найдено, попробуйте поискать по другим ключевым словам.</p>'; break;
+        }
+    ;?>
+    </div>
+<?php } ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'plaza' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(getPlazaLocale()); ?>

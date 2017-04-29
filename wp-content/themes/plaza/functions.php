@@ -88,3 +88,14 @@ add_filter('excerpt_more', function()
 
     return "<a href='$link'> $phrase...</a>";
 });
+
+/**
+ * Custom search form
+ */
+add_filter( 'get_search_form', function()
+{
+    $locale = getPlazaLocale();
+    ob_start();
+    require "languages/$locale/searchform.php";
+    return ob_get_clean();
+} );

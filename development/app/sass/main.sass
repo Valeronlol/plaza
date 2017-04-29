@@ -100,26 +100,46 @@ header
 		flex-direction: row
 		justify-content: space-around
 		margin: 0
+		#searchform_fa
+			&:hover #searchform
+				display: block
+			#searchform
+				z-index: -1
+				display: none
+				position: absolute
+				width: 150px
+				left: -130px
+				top: 0
+				input
+					border: 1px solid #EEEEEE
+					border-right-width: 2px
+					height: 25px
+					width: 100%
+					padding: 0 25px 0 5px
 		li
 			a
 				color: $plaza
 				font-family: $ubuntu-font
 				text-transform: uppercase
-				font-size: 17px
+				font-size: 19px
 				line-height: 70px
 				transition: .25s ease
 				&:hover
 					color: darken($plaza,75%)
 					text-decoration: none
 			.fa
+				position: relative
 				color: $plaza
 				margin-right: 10px
+				cursor: pointer
+				display: inline-block
+				line-height: 70px
 			.fa-phone
 				&:hover
 					animation: bounce 0.75s steps(10) infinite
 			.fa-search
 				&:hover
-					transform: scale(1.25)
+					transform: scale(1.10)
 	.header-logo-wrap
 		padding: 0
 		position: relative
@@ -148,6 +168,8 @@ header
 				margin: 0 auto
 	.fa-search
 		transition: .4s ease-in-out
+
+
 
 footer
 	position: relative

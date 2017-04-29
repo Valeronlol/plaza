@@ -54,9 +54,9 @@
                         </li>
                         <ul class="lang"><?php pll_the_languages() ;?></ul>
                         <li>
-                            <a class="header-menu-search" href="#">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </a>
+                            <i class="fa fa-search" aria-hidden="true" id="searchform_fa">
+                                <?php get_search_form(); ?>
+                            </i>
                         </li>
                     </ul>
                 </div>

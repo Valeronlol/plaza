@@ -1,5 +1,13 @@
 $(function() {
 
+    $('#searchform_fa').on('click', function () {
+        $(this).children('form').trigger('submit');
+    });
+
+    $('#searchform input').on('click', function () {
+        return false;
+    });
+
     // slick slider
     $('.slick-single').slick({
         dots: true,
@@ -44,7 +52,6 @@ $(function() {
             }
         ]
     });
-
 
     // svg color painter
     $('#bottom_menu .container li a').on('mouseenter', function () {
