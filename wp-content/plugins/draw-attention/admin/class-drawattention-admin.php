@@ -353,7 +353,7 @@ if ( !class_exists( 'DrawAttention_Admin' ) ) {
 				return;
 			}
 
-			$post_id = $_GET['post'];
+			$post_id = get_the_ID();
 
 			$deserialized_hotspots = get_post_meta( $post_id, '_da_hotspots', true );
 			if ( empty( $deserialized_hotspots ) ) {
