@@ -21,7 +21,7 @@ add_filter('tiny_mce_before_init', function($initArray) {
     return $initArray;
 });
 add_theme_support( 'post-thumbnails' );
-//show_admin_bar(false); // Show admin menu bar true/false
+show_admin_bar(false); // Show admin menu bar true/false
 
 /**
  * Include template by current lang

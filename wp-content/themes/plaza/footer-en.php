@@ -1,3 +1,11 @@
+<div id="bottom_menu">
+    <div class="container">
+        <div class="row">
+            <?php wp_nav_menu( array('menu' => 'bottom_menu_en' )); ?>
+        </div>
+    </div>
+</div>
+
 </div> <!-- #main-->
 
 <footer class="<?php
@@ -6,15 +14,7 @@ if (!empty(get_post_custom()['class'])){
         echo "$class ";
 }
 ;?>">
-<!--    --><?php //if (is_front_page()) :?>
-        <div id="bottom_menu">
-            <div class="container">
-                <div class="row">
-                    <?php wp_nav_menu( array('menu' => 'bottom_menu_en' )); ?>
-                </div>
-            </div>
-        </div>
-<!--    --><?php //endif ;?>
+
     <div class="container">
         <div class="row">
             <div class="col-md-3  col-sm-12 footer-container">
