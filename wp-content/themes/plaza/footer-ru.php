@@ -1,7 +1,7 @@
 <div id="bottom_menu">
     <div class="container">
         <div class="row">
-            <?php wp_nav_menu( array('menu' => 'bottom_menu_en' )); ?>
+            <?php wp_nav_menu( array('menu' => 'bottom_menu_ru' )); ?>
         </div>
     </div>
 </div>

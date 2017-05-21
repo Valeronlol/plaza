@@ -1,7 +1,7 @@
 <div id="bottom_menu">
     <div class="container">
         <div class="row">
-            <?php wp_nav_menu( array('menu' => 'bottom_menu_en' )); ?>
+            <?php wp_nav_menu( array('menu' => 'bottom_menu_kg', 'menu_class' => 'kg-fix' )); ?>
         </div>
     </div>
 </div>

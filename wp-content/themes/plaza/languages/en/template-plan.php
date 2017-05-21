@@ -11,7 +11,6 @@ get_header('en');
     }
     #floor_map {
         width: 100%;
-        height: 2000px;
     }
     .map-wrap {
         position: relative;
