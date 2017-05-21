@@ -59,8 +59,72 @@ $(function() {
     }).on('mouseleave',function () {
         $(this).removeClass('svg-color');
         })
-
 });
+
+if ( window.innerWidth > 992 ) {
+    /**
+     * floors button handler
+     */
+    var floorButtons = $('.floors-button');
+    floorButtons.on('click', function () {
+        $('.floors-cont').css({display: 'none'});
+        floorButtons.removeClass('active');
+        $(this).addClass('active');
+
+        var href = $(this).attr("data-href");
+        floorLift(href);
+        changeLiftInfo(href);
+    });
+
+    /**
+     * Changing info about current floor on lift panel
+     *
+     * @param href string // data-href attr
+     */
+    function changeLiftInfo(href) {
+        $('#text .info_cont').removeClass('active');
+        $('#text .info_cont[data-href="' + href +'"]').addClass('active');
+    }
+    /**
+     * left handler
+     *
+     * @param floor string
+     */
+    function floorLift(floor) {
+        var difference = 170;
+        var destination = $('#floor_map').height() / 2;
+        switch(floor) {
+            case 'f1':
+                $('body, html').animate( { scrollTop: difference }, 1000 );
+                break;
+            case 'f2':
+                $('body, html').animate( { scrollTop: destination + difference }, 1000 );
+                break;
+        }
+    }
+
+    /**
+     * lift autoscroller
+     */
+    $(window).on( 'scroll', function(){
+        setScroll();
+    });
+
+    /**
+     * scroll func definition
+     */
+    function setScroll() {
+        var scrollres = $(window).scrollTop() - 100;
+        if (scrollres < 0) scrollres = 0;
+        $('#text').stop().animate({'top': scrollres}, 200);
+    }
+
+    /**
+     * defaulut scroll position
+     */
+    setScroll();
+}
+
 /**
  * Google maps API
  */
