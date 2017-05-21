@@ -99,3 +99,8 @@ add_filter( 'get_search_form', function()
     require "languages/$locale/searchform.php";
     return ob_get_clean();
 } );
+
+add_action( 'wp_enqueue_scripts', function() {
+    wp_enqueue_style( 'style-name', get_template_directory_uri() . "/css/main.min.css" );
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . "/js/scripts.min.js", array(), '1.0.0', true );
+} );

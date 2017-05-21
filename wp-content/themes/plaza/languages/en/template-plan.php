@@ -18,8 +18,12 @@ get_header('en');
     #text {
         position: absolute;
     }
+    .plan-wrap {
+        margin-top: 50px;
+        margin-bottom: 75px;
+    }
 </style>
-<div class="container">
+<div class="container plan-wrap">
     <div class="row map-wrap">
 
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 map">

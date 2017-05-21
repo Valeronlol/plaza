@@ -48,8 +48,6 @@
     </div>
 </footer>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/main.min.css">
-<script src="<?php echo get_template_directory_uri();?>/js/scripts.min.js"></script>
 <?php if(!empty(get_post_custom()['google_maps'])) :?>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjSljSaKWga3w6ilMtLUOaHDh067eby1U&callback=initMap"></script>
 <?php endif; ?>
